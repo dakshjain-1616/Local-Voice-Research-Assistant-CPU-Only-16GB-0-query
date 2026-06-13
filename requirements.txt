@@ -1,0 +1,24 @@
+# Core ML / Inference
+onnxruntime>=1.17.0
+onnx-asr[cpu,hub]>=0.1.0
+
+# TTS
+kokoro>=0.9.4
+
+# Audio I/O
+soundfile>=0.12.1
+sounddevice>=0.5.0
+numpy>=1.24.0
+
+# LLM client (OpenAI-compatible llama.cpp endpoint)
+openai>=1.12.0
+requests>=2.31.0
+
+# Configuration
+pyyaml>=6.0
+
+# VAD
+silero-vad>=0.1.0
+
+# (Optional) For building llama.cpp from source
+# See README.md for instructions

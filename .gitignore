@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Models (downloaded via scripts/download_models.sh — too large for git)
+models/
+*.gguf
+*.onnx
+*.bin
+*.pt
+
+# Audio artifacts
+*.wav
+*.mp3
+output.wav
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log

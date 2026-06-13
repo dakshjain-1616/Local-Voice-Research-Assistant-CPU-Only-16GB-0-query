@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#0e3a3a"/>
+    </linearGradient>
+    <linearGradient id="stt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="llm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="tts" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fb7185"/><stop offset="1" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- subtle grid dots -->
+  <g fill="#ffffff" opacity="0.05">
+    <circle cx="120" cy="90" r="2"/><circle cx="220" cy="140" r="2"/><circle cx="1040" cy="120" r="2"/>
+    <circle cx="1120" cy="220" r="2"/><circle cx="980" cy="540" r="2"/><circle cx="160" cy="520" r="2"/>
+  </g>
+
+  <!-- eyebrow / badge -->
+  <g filter="url(#soft)">
+    <rect x="64" y="58" width="300" height="40" rx="20" fill="#0b1220" stroke="#22d3ee" stroke-opacity="0.5"/>
+  </g>
+  <text x="84" y="84" fill="#67e8f9" font-size="18" font-weight="600" letter-spacing="2">NEO MCP · CASE STUDY</text>
+
+  <!-- title -->
+  <text x="64" y="168" fill="#ffffff" font-size="52" font-weight="800">We tried to run a production voice</text>
+  <text x="64" y="226" fill="#ffffff" font-size="52" font-weight="800">agent on a <tspan fill="#67e8f9">16GB CPU</tspan>.</text>
+  <text x="64" y="292" fill="url(#accent)" font-size="46" font-weight="800">The obvious choice lost.</text>
+
+  <!-- pipeline flow -->
+  <g transform="translate(64,360)">
+    <!-- Mic -->
+    <g transform="translate(0,18)">
+      <circle cx="26" cy="36" r="30" fill="#0b1220" stroke="#475569"/>
+      <rect x="18" y="18" width="16" height="28" rx="8" fill="#e2e8f0"/>
+      <path d="M12 40 a14 14 0 0 0 28 0" fill="none" stroke="#e2e8f0" stroke-width="3"/>
+      <line x1="26" y1="54" x2="26" y2="62" stroke="#e2e8f0" stroke-width="3"/>
+    </g>
+    <text x="2" y="118" fill="#94a3b8" font-size="15">Mic in</text>
+
+    <!-- arrow -->
+    <path d="M70 54 h44" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+
+    <!-- STT -->
+    <g transform="translate(124,16)" filter="url(#soft)">
+      <rect width="232" height="76" rx="14" fill="url(#stt)"/>
+      <text x="20" y="32" fill="#06262b" font-size="15" font-weight="700" letter-spacing="1">STT</text>
+      <text x="20" y="56" fill="#06262b" font-size="20" font-weight="800">Parakeet TDT</text>
+    </g>
+    <text x="124" y="118" fill="#67e8f9" font-size="15" font-weight="700">1.69% WER</text>
+
+    <path d="M362 54 h44" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+
+    <!-- LLM -->
+    <g transform="translate(416,16)" filter="url(#soft)">
+      <rect width="252" height="76" rx="14" fill="url(#llm)"/>
+      <text x="20" y="32" fill="#1e1340" font-size="15" font-weight="700" letter-spacing="1">LLM</text>
+      <text x="20" y="56" fill="#ffffff" font-size="20" font-weight="800">Phi-4-mini</text>
+    </g>
+    <text x="416" y="118" fill="#c4b5fd" font-size="15" font-weight="700">~10–12 tok/s on CPU</text>
+
+    <path d="M674 54 h44" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+
+    <!-- TTS -->
+    <g transform="translate(728,16)" filter="url(#soft)">
+      <rect width="232" height="76" rx="14" fill="url(#tts)"/>
+      <text x="20" y="32" fill="#3f0a1a" font-size="15" font-weight="700" letter-spacing="1">TTS</text>
+      <text x="20" y="56" fill="#ffffff" font-size="20" font-weight="800">Kokoro 82M</text>
+    </g>
+    <text x="728" y="118" fill="#fda4af" font-size="15" font-weight="700">UTMOS 4.49</text>
+
+    <path d="M966 54 h44" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+
+    <!-- Speaker -->
+    <g transform="translate(1020,22)">
+      <circle cx="26" cy="32" r="30" fill="#0b1220" stroke="#475569"/>
+      <path d="M16 26 h8 l10 -8 v28 l-10 -8 h-8 z" fill="#e2e8f0"/>
+      <path d="M40 22 a12 12 0 0 1 0 20" fill="none" stroke="#34d399" stroke-width="3"/>
+    </g>
+    <text x="1008" y="118" fill="#94a3b8" font-size="15">Audio out</text>
+  </g>
+
+  <!-- arrowhead def -->
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- metric chips -->
+  <g transform="translate(64,540)" font-size="18" font-weight="700">
+    <g filter="url(#soft)"><rect width="190" height="48" rx="24" fill="#0b1220" stroke="#34d399" stroke-opacity="0.5"/></g>
+    <text x="24" y="31" fill="#6ee7b7">~1–4s</text><text x="86" y="31" fill="#cbd5e1" font-weight="500">to first audio</text>
+
+    <g transform="translate(208,0)" filter="url(#soft)"><rect width="150" height="48" rx="24" fill="#0b1220" stroke="#60a5fa" stroke-opacity="0.5"/></g>
+    <text x="232" y="31" fill="#93c5fd">~6 GB</text><text x="296" y="31" fill="#cbd5e1" font-weight="500">RAM</text>
+
+    <g transform="translate(372,0)" filter="url(#soft)"><rect width="140" height="48" rx="24" fill="#0b1220" stroke="#fbbf24" stroke-opacity="0.6"/></g>
+    <text x="396" y="31" fill="#fcd34d">$0</text><text x="430" y="31" fill="#cbd5e1" font-weight="500">/query</text>
+
+    <g transform="translate(526,0)" filter="url(#soft)"><rect width="232" height="48" rx="24" fill="#0b1220" stroke="#f472b6" stroke-opacity="0.5"/></g>
+    <text x="550" y="31" fill="#f9a8d4">No GPU</text><text x="640" y="31" fill="#cbd5e1" font-weight="500">· No cloud</text>
+  </g>
+
+  <!-- footer right -->
+  <text x="1136" y="600" text-anchor="end" fill="#64748b" font-size="15">Parakeet · Phi-4-mini · Kokoro — chosen &amp; tested by NEO MCP</text>
+</svg>

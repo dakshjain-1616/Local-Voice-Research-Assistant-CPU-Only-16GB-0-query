@@ -1,0 +1,51 @@
+# Speech-to-Speech Pipeline Configuration
+# Target: CPU-only, 16GB RAM, 4-core machine
+
+# Model paths (under ./models/ relative to project root)
+models:
+  stt: "models/parakeet-tdt-0.6b-v3"  # ONNX INT8 model path (managed by onnx-asr cache)
+  llm: "models/phi-4-mini-instruct-q4_k_m.gguf"
+
+# Audio parameters
+audio:
+  stt_sample_rate: 16000   # Parakeet TDT expects 16 kHz
+  tts_sample_rate: 24000   # Kokoro outputs 24 kHz
+  channels: 1              # Mono
+  dtype: int16
+
+# Thread allocation (4 cores total)
+threads:
+  llm: 2    # llama.cpp threads (2 CPU cores)
+  stt: 1    # ONNX runtime inter/intra threads
+  tts: 1    # Kokoro inference threads
+
+# Kokoro TTS settings
+tts:
+  voice: "af_heart"    # Default voice pack
+  lang_code: "a"       # American English
+  speed: 1.0
+
+# llama-server OpenAI-compatible endpoint
+llama_server:
+  url: "http://127.0.0.1:8081/v1"
+  model: "phi-4-mini-instruct"
+
+# LLM generation defaults
+llm:
+  max_tokens: 256
+  temperature: 0.1
+  top_p: 0.9
+  repeat_penalty: 1.1
+  system_prompt: "You are a helpful research assistant. Answer concisely and accurately."
+
+# VAD settings
+vad:
+  threshold: 0.5           # Silero VAD confidence threshold
+  min_speech_duration_ms: 100
+  min_silence_duration_ms: 500   # Endpoint silence timeout
+  speech_pad_ms: 30              # Padding around speech segments
+
+# Pipeline behavior
+pipeline:
+  text_only: false        # Set true to skip audio playback
+  debug_logging: false    # Enable verbose logging
