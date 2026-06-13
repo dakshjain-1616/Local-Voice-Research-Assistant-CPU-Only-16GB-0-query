@@ -8,7 +8,7 @@
 
 Every team building voice AI eventually asks the same uncomfortable question: **do we really need a GPU and a cloud bill to ship this?**
 
-We decided to find out — rigorously. We handed NEO MCP a single brief: *find the best open-source speech-to-speech pipeline that runs on a 16GB, CPU-only laptop for a production voice research assistant, and prove it.*
+We decided to find out — rigorously. We handed [NEO MCP](https://docs.heyneo.com/neo-mcp) a single brief: *find the best open-source speech-to-speech pipeline that runs on a 16GB, CPU-only laptop for a production voice research assistant, and prove it.*
 
 What came back wasn't just an answer. It was a reversal, a sensitivity analysis, and working code. Here's the story.
 
@@ -190,4 +190,10 @@ Full benchmark report (24 sections, cost analysis, risk register, upgrade path):
 
 ---
 
-*This case study — the research, the analysis, and the working code — was produced by NEO MCP.*
+## Built with NEO MCP
+
+This case study — the research, the analysis, and the working code — was produced by **NEO MCP**, an autonomous AI/ML engineering agent that researches, reasons, recommends, and ships tested code.
+
+- 📖 **Docs:** [docs.heyneo.com/neo-mcp](https://docs.heyneo.com/neo-mcp)
+- 🧩 **VS Code:** [marketplace.visualstudio.com/items?itemName=NeoResearchInc.heyneo](https://marketplace.visualstudio.com/items?itemName=NeoResearchInc.heyneo)
+- 🖱️ **Cursor:** [marketplace.cursorapi.com/items/?itemName=NeoResearchInc.heyneo](https://marketplace.cursorapi.com/items/?itemName=NeoResearchInc.heyneo)

@@ -29,7 +29,8 @@ python main.py chat --text-only   # no audio hardware needed
 | [`speech_pipeline_benchmark_report.md`](./speech_pipeline_benchmark_report.md) | The full 24-section benchmark & deployment case study (produced by NEO MCP) |
 | [`BLOG.md`](./BLOG.md) | Engineering blog version — *"We Tried to Run a Production Voice Agent on a 16GB CPU. The Obvious Choice Lost."* |
 
-> **Built by NEO MCP** — autonomous research → recommendation → self-revision → sensitivity analysis → tested code. See §22.5 of the report for the full process.
+> **Built by [NEO MCP](https://docs.heyneo.com/neo-mcp)** — autonomous research → recommendation → self-revision → sensitivity analysis → tested code. See §22.5 of the report for the full process.
+> Get NEO MCP: [Docs](https://docs.heyneo.com/neo-mcp) · [VS Code](https://marketplace.visualstudio.com/items?itemName=NeoResearchInc.heyneo) · [Cursor](https://marketplace.cursorapi.com/items/?itemName=NeoResearchInc.heyneo)
 
 ---
 
